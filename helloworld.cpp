@@ -5,7 +5,7 @@
 
 using namespace std; // ? this is a shortcut(?) for cleaner code, main thing this does is prevent name collisons between 2 or more different libraries
 
-/* When not writing line 3,
+/* When not writing line 6,
 the output statement becomes:
 std::cout << "Whatever here"; */
 
@@ -127,15 +127,15 @@ void fruits::hello(double x, double y){
 
 int main(){
     
-    /*cout << "Hello World\n"; // ! C++ doesn't automatically sends cursor to the next line as in Python
+    cout << "Hello World\n"; // ! C++ doesn't automatically sends cursor to the next line as in Python
     
     cout << "I don't know what to do,\n"; // * That's why \n (in quotes,\n is a escape sequence) or << endl (after quotes) is used
 
-    int a;
+    int op;
     
     cout << "Enter a no: ";
     
-    cin >> a; // ! This is how to take input from user and like python the input is given in the above line itself
+    cin >> op; // ! This is how to take input from user and like python the input is given in the above line itself
     
     cout << "This is " << a << endl; // * This will be put in a new line without our help cause it is after cin
         
@@ -151,7 +151,7 @@ int main(){
 
     declaringthevariables(); // * This is how to call a function*/
 
-    /*f(1,2);
+    f(1,2);
 
     b("Jiam");
 
