@@ -109,7 +109,7 @@ class fruits{ // * keyword name{}
             cout << "This works" << endl;
         }
 
-        fruits(string x, int y){ // * This is a much faster to give a object it's values 
+        fruits(string x, int y){ // * This is a much faster way to give a object it's values 
             name = x;
             fruitno = y;
         }
@@ -118,7 +118,28 @@ class fruits{ // * keyword name{}
 
         int i; // * This won't be able to store any data from any object outside the class
 
+    // * Encapsulation
 
+    // * This is used to hide sensitive data from end users where they can't access the value of an important variable
+
+    // * To apply encapsulation, we must declare a private variable in the class
+
+    // * To assign a value to a private variable, we must make a setter function, given below (Setter functions must be kept in public)
+
+    // * To see the value of the private variable, we can make a getter function which either returns, prints, etc. for the purpose (Getter functions must also be kept in public)
+
+    public:
+
+        // * Setter function example
+        void setvalueofk(int ss){
+            k = ss; // * Now k has been assigned a value while being a private variable
+        }
+
+        // * Getter function example
+        void givevalueofk(){
+            cout << k << endl; // * This prints the value of k
+        }
+    
 }; // * Similar to a structure but with more stuff
 
 void fruits::hello(double x, double y){
@@ -225,6 +246,18 @@ int main(){
     cout << Fruit3.name << " and " << Fruit3.fruitno << endl; 
 
     // ! We can use any object (Fruit1 and Fruit2) to call the functions inside the class 
+
+    // ! Encapsulation
+
+    Fruit1.setvalueofk(100);
+
+    Fruit1.givevalueofk();
+
+    Fruit2.givevalueofk(); // * Random values will be returned
+
+    Fruit3.givevalueofk(); // * Random values will be returned here too
+
+    // * Because we have initialized variable k only in object Fruit1 that it prints 100
 
 }
 
