@@ -142,7 +142,7 @@ class fruits{ // * keyword name{}
     
 }; // * Similar to a structure but with more stuff
 
-void fruits::hello(double x, double y){
+void fruits::hello(double x, double y){ // * We can put functions of a particular class outside like this (This will be considered public function)
     cout << x+y << endl;
 }
 
