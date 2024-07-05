@@ -276,7 +276,7 @@ int main(){
 
     // * Because we have initialized variable k only in object Fruit1 that it prints 100
     
-    berry banana; // * Initial a object using class berry
+    berry banana; // * Initial a object using class berry (The constructor of class fruits will also be executed as this is a inherited class)
 
     cout << banana.berr << " is " << banana.iberry << endl; // * Object Banana can now access variables of parent class fruits too
 
