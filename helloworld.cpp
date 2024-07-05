@@ -87,6 +87,8 @@ class fruits{ // * keyword name{}
         string name;
         int fruitno;
 
+        string berr = "Banana";
+
     // ! Functions inside a Class
 
     // ! Functions and Constructors are always public (Remember this)
@@ -118,7 +120,7 @@ class fruits{ // * keyword name{}
 
         int i; // * This won't be able to store any data from any object outside the class
 
-    // * Encapsulation
+    // ! Encapsulation
 
     // * This is used to hide sensitive data from end users where they can't access the value of an important variable
 
@@ -145,6 +147,21 @@ class fruits{ // * keyword name{}
 void fruits::hello(double x, double y){ // * We can put functions of a particular class outside like this (This will be considered public function)
     cout << x+y << endl;
 }
+
+// ! Inheritance
+
+// * In C++, it is possible to inherit attributes and methods from one class to another
+
+// * We can inherit from a class using the : symbol
+
+// * class childclassname : public parentclassname{}
+
+class berry: public fruits{
+    
+    public:
+    
+        string iberry = "Yes";
+};
 
 int main(){
     
@@ -258,6 +275,10 @@ int main(){
     Fruit3.givevalueofk(); // * Random values will be returned here too
 
     // * Because we have initialized variable k only in object Fruit1 that it prints 100
+    
+    berry banana; // * Initial a object using class berry
+
+    cout << banana.berr << " is " << banana.iberry << endl; // * Object Banana can now access variables of parent class fruits too
 
 }
 
