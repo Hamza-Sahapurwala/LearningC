@@ -39,6 +39,10 @@ void referencevariablesmemoryaddressesandpointers();
 
 void f(int x, int y); // * we can declare it like this
 
+void b(string a = "Hello"){
+    cout << a << endl;
+}
+
 int a(int x, int y){
     return x+y;
 }
@@ -163,6 +167,10 @@ class berry: public fruits{
         string iberry = "Yes";
 };
 
+// ! Multilevel Inheritance
+
+class subspecies: public berry{}; // * Yes we can initialize classes like this
+
 int main(){
     
     cout << "Hello World\n"; // ! C++ doesn't automatically sends cursor to the next line as in Python
@@ -275,10 +283,18 @@ int main(){
     Fruit3.givevalueofk(); // * Random values will be returned here too
 
     // * Because we have initialized variable k only in object Fruit1 that it prints 100
+
+    // ! Inheritance
     
     berry banana; // * Initial a object using class berry (The constructor of class fruits will also be executed as this is a inherited class)
 
     cout << banana.berr << " is " << banana.iberry << endl; // * Object Banana can now access variables of parent class fruits too
+
+    // ! Multilevel Inheritance
+
+    subspecies somefruit; // * As this part of a multilevel inheritance, this can be considered the grandchild of the parent class, that's why the constructor is called from class fruits
+
+    somefruit.hello(); // * Same explanation as above for why we are able the functions and variables of parent and child classes
 
 }
 
@@ -684,8 +700,3 @@ void referencevariablesmemoryaddressesandpointers(){
 void f(int x, int y){
     cout << x+y << endl;
 }
-
-void b(string a = "Hello"){
-    cout << a << endl;
-}
-
