@@ -76,6 +76,20 @@ int sum(int k) {
   }
 }
 
+// ! Global Variables
+
+int x = 5; // * This is a global variable which can be accessed by any function and class and it's value can also be changed in any function or class
+
+void myFunction() {
+  // * Local variable with the same name as the global variable (x)
+  int x = 22;
+  cout << x << endl; // * Refers to the local variable x and this will print 22
+}
+
+void myFun(){
+    cout << ++x << endl; // * Changes the value of x and then prints the value of x (which will be 6 now)
+}
+
 // ! Classes 
 
 class fruits{ // * keyword name{}
