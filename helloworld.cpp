@@ -185,6 +185,21 @@ class berry: public fruits{
 
 class subspecies: public berry{}; // * Yes we can initialize classes like this
 
+// ! Multiple Inheritance
+
+// * We can inherit more than one classes at once
+
+// * For this example, I will just create one new class but more than one class can be inherited
+
+class vegetables{
+    public:
+        void omg(){
+            cout << "Yay" << endl;
+        }
+};
+
+class food: public fruits, public vegetables{}; // * We can inherit more than one classes by just adding a comma between each classes (do not forget public keyword)
+
 int main(){
     
     cout << "Hello World\n"; // ! C++ doesn't automatically sends cursor to the next line as in Python
@@ -310,6 +325,13 @@ int main(){
 
     somefruit.hello(); // * Same explanation as above for why we are able the functions and variables of parent and child classes
 
+    // ! Multiple Inheritance
+
+    food q; // * As the fruit class has a constructor, that will run
+
+    q.hello(); // * We can access the functions and variables of class fruit
+
+    q.omg(); // * We can access the functions and variables of class vegetables
 }
 
 void declaringthevariables(){
