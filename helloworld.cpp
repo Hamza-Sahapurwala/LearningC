@@ -96,7 +96,7 @@ class fruits{ // * keyword name{}
 
     int k; // ! The is a private variable by default as it is not specified under any access specifier
 
-    protected: // * These variables can only used by inherited classes and can't be accessed outside this and inherited classes
+    protected: // * These variables can only used by inherited classes and can't be accessed outside the class
 
         int j;
 
@@ -179,6 +179,20 @@ class berry: public fruits{
     public:
     
         string iberry = "Yes";
+        
+        // ! Access Specifiers
+
+        // * Just like how we can give and set values of private variables
+
+        // * We can also set and get the values of protected variables (only) from the inherited classes
+
+        void setvalueofprotected(int a){
+            j = a;
+        }
+
+        void givevalueofprotected(){
+            cout << j << endl;
+        }
 };
 
 // ! Multilevel Inheritance
@@ -198,7 +212,9 @@ class vegetables{
         }
 };
 
-class food: public fruits, public vegetables{}; // * We can inherit more than one classes by just adding a comma between each classes (do not forget public keyword)
+// * We can inherit more than one classes by just adding a comma between each classes (do not forget public keyword)
+
+class food: public fruits, public vegetables{};
 
 int main(){
     
@@ -332,6 +348,14 @@ int main(){
     q.hello(); // * We can access the functions and variables of class fruit
 
     q.omg(); // * We can access the functions and variables of class vegetables
+
+    // ! Access Specifiers
+
+    berry ob; // * The constructor from parent class will run
+
+    ob.setvalueofprotected(500); // * gives J the value of 500
+
+    ob.givevalueofprotected(); // * prints 500
 }
 
 void declaringthevariables(){
