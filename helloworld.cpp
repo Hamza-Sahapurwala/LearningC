@@ -216,6 +216,32 @@ class vegetables{
 
 class food: public fruits, public vegetables{};
 
+// ! Polymorphism
+
+// * Do you remember Function Overloading? That is an example of polymorphism
+
+// * Polymorphism means "Many Forms"
+
+// * It's main implementation is function overloading between the functions of different derived classes(from the same parent class, of course) which can have the same function name but can do different tasks 
+
+// * Example:(I am using vegetable class as base class cause fruits class has a constructor and Vegetable class doesn't)
+
+class brinjal: public vegetables{
+    public:
+        void omg(){ // * The same name of the function as the one in the base class
+            cout << "Brinjal" << endl;
+        }
+};
+
+class tamatar: public vegetables{
+    public:
+        void omg(){ // * Same function name
+            cout << "Tamatar" << endl;
+        }
+};
+
+// * I believe so that we can add parameters in any of the functions in each derived class but I am not doing that here
+
 int main(){
     
     cout << "Hello World\n"; // ! C++ doesn't automatically sends cursor to the next line as in Python
@@ -349,13 +375,29 @@ int main(){
 
     q.omg(); // * We can access the functions and variables of class vegetables
 
-    // ! Access Specifiers
+    // ! Access Specifiers (Protected Variables)
 
     berry ob; // * The constructor from parent class will run
 
     ob.setvalueofprotected(500); // * gives J the value of 500
 
     ob.givevalueofprotected(); // * prints 500
+
+    // ! Polymorphism
+
+    vegetables vege;
+
+    brinjal brin;
+
+    tamatar tam;
+
+    vege.omg(); // * This will print Yay
+
+    brin.omg(); // * This will print Brinjal
+
+    tam.omg(); // * This will print Tamatar
+
+    // * The above functions work like function overloading, just that the same function name exists in different classes
 }
 
 void declaringthevariables(){
