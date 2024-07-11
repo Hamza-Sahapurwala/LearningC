@@ -1,7 +1,8 @@
 #include <iostream> // * Header File Library (Essentially we are calling a library for input/output functions)
 #include <string> // * Library for manipulation of strings
 #include <cmath> // * Library for math functions
-#include <ctime>
+#include <ctime> // * Library for time functions
+#include <fstream> // * Library for working with files (ALWAYS must be there with <iostream>)
 
 using namespace std; // ? this is a shortcut(?) for cleaner code, main thing this does is prevent name collisons between 2 or more different libraries
 
@@ -36,6 +37,8 @@ void structuresstuff();
 void enumstuff();
 
 void referencevariablesmemoryaddressesandpointers();
+
+void workingwithfiles();
 
 void f(int x, int y); // * we can declare it like this
 
@@ -398,6 +401,10 @@ int main(){
     tam.omg(); // * This will print Tamatar
 
     // * The above functions work like function overloading, just that the same function name exists in different classes
+
+    // ! Files
+
+    workingwithfiles();
 }
 
 void declaringthevariables(){
@@ -801,4 +808,23 @@ void referencevariablesmemoryaddressesandpointers(){
 
 void f(int x, int y){
     cout << x+y << endl;
+}
+
+void workingwithfiles(){
+    
+    ofstream newfile("wow.txt");
+
+    newfile << "Hello Everybody";
+
+    newfile.close();
+
+    string a;
+
+    ifstream reading("wow.txt");
+
+    while(getline(reading, a)){
+        cout << a;
+    }
+
+    reading.close();
 }
