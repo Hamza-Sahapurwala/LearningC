@@ -812,19 +812,19 @@ void f(int x, int y){
 
 void workingwithfiles(){
     
-    ofstream newfile("wow.txt");
+    ofstream newfile("wow.txt"); // * This will create and open a text file
 
-    newfile << "Hello Everybody";
+    newfile << "Hello Everybody"; // * This will write on the file
 
-    newfile.close();
+    newfile.close(); // * Close the file
 
     string a;
 
-    ifstream reading("wow.txt");
+    ifstream reading("wow.txt"); // * Reading from a text file
 
-    while(getline(reading, a)){
+    while(getline(reading, a)){ // * How to read multiple lines from the text files
         cout << a;
     }
 
-    reading.close();
+    reading.close(); // * Close the files
 }
