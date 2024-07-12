@@ -40,6 +40,8 @@ void referencevariablesmemoryaddressesandpointers();
 
 void workingwithfiles();
 
+void trythrowandcatch();
+
 void f(int x, int y); // * we can declare it like this
 
 void b(string a = "Hello"){
@@ -402,9 +404,13 @@ int main(){
 
     // * The above functions work like function overloading, just that the same function name exists in different classes
 
-    // ! Files
+    // ! File Handling
 
     workingwithfiles();
+
+    // ! Try, Throw and Catch
+
+    trythrowandcatch();
 }
 
 void declaringthevariables(){
@@ -811,6 +817,8 @@ void f(int x, int y){
 }
 
 void workingwithfiles(){
+
+    // ! File Handling
     
     ofstream newfile("wow.txt"); // * This will create and open a text file
 
@@ -823,8 +831,49 @@ void workingwithfiles(){
     ifstream reading("wow.txt"); // * Reading from a text file
 
     while(getline(reading, a)){ // * How to read multiple lines from the text files
-        cout << a;
+        cout << a << endl;
     }
 
     reading.close(); // * Close the files
+}
+
+void trythrowandcatch(){
+
+    // ! Try, Throw and Catch
+
+    // * This is the same as try and except blocks in Python
+
+    // * The definations for each keyword (Taken from W3Schools) are here:
+
+    // * The try statement allows you to define a block of code to be tested for errors while it is being executed.
+
+    // * The throw keyword throws an exception when a problem is detected, which lets us create a custom error.
+
+    // * The catch statement allows you to define a block of code to be executed, if an error occurs in the try block.
+
+    // ! Try and Catch always comes in pairs
+
+    // * Example Code
+
+    try{
+        string fruit = "Banana";
+        string f;
+        cout << "Enter a fruit:" << endl;
+        getline(cin >> ws, f);
+        if (f == fruit){
+            cout << "Correct Fruit!" << endl;
+        }
+        else{
+            throw(f); // * We can also throw custom errors by using throw 5005 or any other no. if we don't need to use the string in the catch block
+            // * Don't forget to use ... if you are using custom no. as it will not waste memory then
+        }
+    }
+
+    catch (string a){
+        cout << "No the fruit should be Banana, not " << a << endl;
+    }
+
+    // * If we don't want to output the value of throw, just put ... instead of string a (inside the parenthesis besides catch)
+
+    // * ... will accept any data type, Just that you won't be able to access or use it
 }
