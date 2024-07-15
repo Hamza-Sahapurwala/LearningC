@@ -899,4 +899,10 @@ void usingctime(){
     // * Display the date and time represented by the timestamp
 
     cout << ctime(&timestamp) << endl; 
+
+    // ! There are two different data types to store date and time
+
+    // * time_t for timestamps
+
+    // * sturct tm for datetime structures 
 }
