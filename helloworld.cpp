@@ -42,6 +42,8 @@ void workingwithfiles();
 
 void trythrowandcatch();
 
+void usingctime();
+
 void f(int x, int y); // * we can declare it like this
 
 void b(string a = "Hello"){
@@ -411,6 +413,10 @@ int main(){
     // ! Try, Throw and Catch
 
     trythrowandcatch();
+
+    // ! Ctime usage
+
+    usingctime();
 }
 
 void declaringthevariables(){
@@ -876,4 +882,21 @@ void trythrowandcatch(){
     // * If we don't want to output the value of throw, just put ... instead of string a (inside the parenthesis besides catch)
 
     // * ... will accept any data type, Just that you won't be able to access or use it
+}
+
+void usingctime(){
+
+    // ! Getting timestamp for current date and time
+
+    time_t timestamp; // * time_t is a real arithmetic data type capable of representing times
+
+    time(&timestamp); // * Writes a timestamp to the given memory location given by the parameter(timestamp) but it also returns the given value (for some reason)
+
+    // * So a better way to use time() function is too pass in a NULL pointer and use the return value instead
+
+    timestamp = time(NULL);
+
+    // * Display the date and time represented by the timestamp
+
+    cout << ctime(&timestamp) << endl; 
 }
