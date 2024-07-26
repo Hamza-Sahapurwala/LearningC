@@ -892,17 +892,40 @@ void usingctime(){
 
     time(&timestamp); // * Writes a timestamp to the given memory location given by the parameter(timestamp) but it also returns the given value (for some reason)
 
-    // * So a better way to use time() function is too pass in a NULL pointer and use the return value instead
+    // * So a better way to use time() function is to pass in a NULL pointer and use the return value instead
 
     timestamp = time(NULL);
 
     // * Display the date and time represented by the timestamp
 
-    cout << ctime(&timestamp) << endl; 
+    cout << ctime(&timestamp); // * Don't add endl after this as it will go to the next line by it self
+
+    cout << timestamp << endl; // * Random no. are printed (from what logic, idk)
 
     // ! There are two different data types to store date and time
 
     // * time_t for timestamps
 
     // * sturct tm for datetime structures 
+
+    // * Timestamps represent a moment in time as a single number, which makes it easier for the commputer to do calculations
+
+    // * Datetime structures are sturctures that represent different components of the date and time as members which makes it easier for specifying dates
+
+    /*tm_sec - The seconds within a minute
+    tm_min - The minutes within an hour
+    tm_hour - The hour within a day (from 0 to 23)
+    tm_mday - The day of the month
+    tm_mon - The month (from 0 to 11 starting with January)
+    tm_year - The number of years since 1900
+    tm_wday - The weekday (from 0 to 6 starting with Sunday)
+    tm_yday - The day of the year (from 0 to 365 with 0 being January 1)
+    tm_isdst - Positive when daylight saving time is in effect, zero when not in effect and negative when unknown
+    */
+
+    // * Hours are represented in 24-Hour format
+
+    // * Months go from 0 to 11. January is 0 and December is 11.
+
+    // * Years are represented relative to the year 1900. 2024 is represented as 124 because 124 years have passed since 1900
 }
