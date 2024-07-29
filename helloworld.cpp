@@ -928,4 +928,31 @@ void usingctime(){
     // * Months go from 0 to 11. January is 0 and December is 11.
 
     // * Years are represented relative to the year 1900. 2024 is represented as 124 because 124 years have passed since 1900
+
+    // ! Creating Timestamps
+
+    // * time() can create timestamp for only current date
+
+    // * mktime() can create timestamp for any date
+
+    // * mktime() converts a datetime structure into a timestamp
+
+    struct tm datetime;
+    time_t timestam;
+
+    datetime.tm_year = 2024 - 1900; // * Number of years since 1900
+    datetime.tm_mon = 12 - 1; // * Number of months since January
+    datetime.tm_mday = 17;
+    datetime.tm_hour = 12;
+    datetime.tm_min = 30;
+    datetime.tm_sec = 1;
+    // * Daylight Savings must be specified
+    // * -1 uses the computer's timezone setting
+    datetime.tm_isdst = -1;
+
+    timestam = mktime(&datetime);
+
+    cout << ctime(&timestam);
+
+    // ! The mktime() function needs these members to have a value: tm_year, tm_mon, tm_mday, tm_hour, tm_min, tm_sec and tm_isdst
 }
