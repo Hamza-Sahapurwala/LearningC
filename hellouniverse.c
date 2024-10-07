@@ -25,4 +25,18 @@ int main(){ // * This is a function in C (The basic building block)
        \\ -> let's us add a backslash
        \" -> Inserts a " to the string*/
 
+    // ! Variables
+
+    int a = 10;
+
+    float b = 10.01;
+
+    char c = 'C'; // * Single characters should always be in single quotes ('')
+
+    // * We can also assign like this
+
+    int d;
+
+    d = 15;
+
 }
