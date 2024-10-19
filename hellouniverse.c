@@ -18,12 +18,13 @@ int main(){ // * This is a function in C (The basic building block)
 
     // ! NOTE: Only use double quotes ("") for printing more than 1 character!!!
 
-    printf("\nI am in a different line!");
+    printf("\nI am in a different line!\n");
 
     /* Other Escape Sequences
        \t -> jumps 4(or smt) spaces
        \\ -> let's us add a backslash
-       \" -> Inserts a " to the string*/
+       \" -> Inserts a " to the string
+       */
 
     // ! Variables
 
@@ -38,5 +39,50 @@ int main(){ // * This is a function in C (The basic building block)
     int d;
 
     d = 15;
+    
+    // ! Printing variables in printf statements
 
+    // * It's C, it's not easy to even print integers alone in printf statements
+
+    // * We need format specifiers for that!!!
+
+    // * What are format specifiers, you may ask?
+
+    // * They tell what data type the variable is storing to the compiler
+
+    // * That's why C is a very secure language, even the compiler doesn't know what value and data type the variable holds
+
+    // * Format specifiers are used to take inputs and outputs of specific data types
+
+    // * It always starts with a %
+
+    // * %d = int
+
+    // * %c = character
+
+    // * %f = float
+
+    printf("%d\n", d);
+
+    printf("%f\n", b);
+
+    printf("%c\n", c);
+
+    printf("My name is %c and my age is %d\n", d, c); // * See this line doesn't print what we want it too
+
+    // * As said earlier, C doesn't know anything that you are printing
+
+    // * for %c I have given a integer value and for %d I have given a character value(which was converted to ascii)
+
+    // * The correct statement for the above would be
+
+    printf("My name is %c and my age is %d\n", c, d); // * This gives the statement we want
+
+    // * We can also print individual values
+
+    printf("%d\n", 9);
+
+    printf("%f\n", 0.01);
+
+    printf("%c\n", 'A');
 }
