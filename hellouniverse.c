@@ -85,4 +85,6 @@ int main(){ // * This is a function in C (The basic building block)
     printf("%f\n", 0.01);
 
     printf("%c\n", 'A');
+
+    // * You can change the values of variables freely(keep in mind that the data type is same)
 }
