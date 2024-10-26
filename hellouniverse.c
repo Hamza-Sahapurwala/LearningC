@@ -80,11 +80,30 @@ int main(){ // * This is a function in C (The basic building block)
 
     // * We can also print individual values
 
-    printf("%d\n", 9);
+    printf("%d\n", 9); // ! We can also use %i
 
-    printf("%f\n", 0.01);
+    printf("%f\n", 0.01); // ! We can also use %F
 
     printf("%c\n", 'A');
 
     // * You can change the values of variables freely(keep in mind that the data type is same)
+
+    // ! Variable Declaration
+    
+    int x = 5, y = 6, z = 7;
+
+    // OR
+
+    int p,q,r;
+
+    p=q=r=15;
+
+    /* Naming rules I found online:
+    Names can contain letters, digits and underscores
+    Names must begin with a letter or an underscore (_)
+    Names are case-sensitive (myVar and myvar are different variables)
+    Names cannot contain whitespaces or special characters like !, #, %, etc.
+    Reserved words (such as int) cannot be used as names*/
+
+
 }
