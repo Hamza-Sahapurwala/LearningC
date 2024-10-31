@@ -39,6 +39,8 @@ int main(){ // * This is a function in C (The basic building block)
     int d;
 
     d = 15;
+
+    double ef = 5.23;
     
     // ! Printing variables in printf statements
 
@@ -56,11 +58,15 @@ int main(){ // * This is a function in C (The basic building block)
 
     // * It always starts with a %
 
-    // * %d = int
+    // * %d or %i = int
 
     // * %c = character
 
-    // * %f = float
+    // * %s = string
+
+    // * %f or %F = float
+
+    // * %lf = double
 
     printf("%d\n", d);
 
@@ -105,5 +111,23 @@ int main(){ // * This is a function in C (The basic building block)
     Names cannot contain whitespaces or special characters like !, #, %, etc.
     Reserved words (such as int) cannot be used as names*/
 
+    // ! Characters
 
+    char aaa = 65; // * We are giving an integer value to a character
+
+    // * What that does is convert the integer to the related ascii value
+
+    printf("%c\n",aaa); // * This returns A
+
+    char hello = "Hello";
+
+    printf("%c\n",hello); // * This doesn't work
+
+    char hell = 'Hello';
+
+    printf("%c\n",hell); // * This prints the last letter of value hell
+
+    char hel[] = "Hello"; // * This is strings in C
+
+    printf("%s\n",hel); // * This helps us print strings
 }
