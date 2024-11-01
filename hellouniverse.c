@@ -152,4 +152,16 @@ int main(){ // * This is a function in C (The basic building block)
     printf("%f\n",f1); // * This prints 12000
 
     printf("%lf\n",d1); // * This also prints 12000
+
+    // ! Decimal Precision
+
+    // * Naturally, the printf statement prints out till 6 decimal digits
+
+    // * To control how many decimal digits are printed out, we use the %.<no. of decimal digits to print><f or lf>
+
+    // * This works for both double and float data types
+
+    printf("%.1f\n",f1); // * This will print 12000.0
+
+    printf("%.0lf\n",d1); // * With .0, it prints 12000
 }
