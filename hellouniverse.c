@@ -121,11 +121,11 @@ int main(){ // * This is a function in C (The basic building block)
 
     char hello = "Hello";
 
-    printf("%c\n",hello); // * This doesn't work
+    printf("%c\n",hello); // * This doesn't work and prints some random value
 
     char hell = 'Hello';
 
-    printf("%c\n",hell); // * This prints the last letter of value hell
+    printf("%c\n",hell); // * This prints the last letter of value hell (Look at the single quotes)
 
     char hel[] = "Hello"; // * This is strings in C
 
