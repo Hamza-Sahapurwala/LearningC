@@ -130,4 +130,26 @@ int main(){ // * This is a function in C (The basic building block)
     char hel[] = "Hello"; // * This is strings in C
 
     printf("%s\n",hel); // * This helps us print strings
+
+    // ! Float vs Double
+
+    // * Float data type has a precision of 6 or 7 decimal digits
+
+    // * Double data type has a precision of about 15 decimal digits
+
+    // * Float takes up 4 bytes
+
+    // * Double takes up 8 bytes
+
+    // * It is safer to use double but keep the space taken in mind
+
+    // * We can also represent scientific no. using e(or E)
+
+    float f1 = 12E3; // * This value can also be written as 12e3 and give the same value
+
+    double d1 = 12e3; // * This value can also be written as 12E3 and give the same value
+
+    printf("%f\n",f1); // * This prints 12000
+
+    printf("%lf\n",d1); // * This also prints 12000
 }
