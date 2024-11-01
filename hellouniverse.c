@@ -164,4 +164,28 @@ int main(){ // * This is a function in C (The basic building block)
     printf("%.1f\n",f1); // * This will print 12000.0
 
     printf("%.0lf\n",d1); // * With .0, it prints 12000
+
+    // ! Memory Size and sizeof Operator
+
+    /*  This is the memory taken by each of the data type in C
+    int	    2 or 4 bytes
+    float	4 bytes
+    double	8 bytes
+    char	1 byte   */
+
+    // * We can also use sizeof(<the variable corresponding to the data type>) to find out how much space is taken
+
+    printf("%lu\n",sizeof(a)); // * Prints how much bytes is taken by integer data type
+
+    printf("%lu\n",sizeof(b)); // * Prints how much bytes is taken by float data type
+    
+    printf("%lu\n",sizeof(c)); // * Prints how much bytes is taken by character data type
+        
+    printf("%lu\n",sizeof(d1)); // * Prints how much bytes is taken by double data type
+
+    // ! The compiler expects long unsigned integer(lu) by the sizeof() operator
+
+    // * That's why %lu is used instead of %i
+
+    // * Though %i can work on some computers but it is better to use %lu
 }
