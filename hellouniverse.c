@@ -188,4 +188,38 @@ int main(){ // * This is a function in C (The basic building block)
     // * That's why %lu is used instead of %i
 
     // * Though %i can work on some computers but it is better to use %lu
+
+    // ! Data Conversion
+
+    // * Two types as known:
+
+    // * Implicit (Automatic)
+
+    float floa = 9;
+
+    printf("%f\n",floa); // * Prints 9.00000000
+
+    int inte = 9.99;
+
+    printf("%i\n", inte); // * Prints 9
+
+    floa = 5 / 2;
+
+    printf("%f\n",floa); // * Prints 2.000 not 2.5 as the no. by themselves are integers
+
+    // ! Explicit Conversion
+
+    floa = (float) 5 / 2;
+
+    printf("%.1f\n", floa); // * This prints 2.5 as we have converted the no.s itself to float
+
+    // * We can do the same thing for variables
+
+    int v1 = 5;
+
+    int v2 = 2;
+
+    float sum = (float) v1 / v2;
+
+    printf("%.1f\n", sum);
 }
