@@ -222,4 +222,17 @@ int main(){ // * This is a function in C (The basic building block)
     float sum = (float) v1 / v2;
 
     printf("%.1f\n", sum);
+
+    // ! Constants
+
+    // * We can keep some variables as constants using the const keyword
+
+    // * constant variables don't have their values changed during the run of the program
+
+    // * Variables must always be assigned a value when declaring it as a constant variable(Mandatory)
+
+    // * Syntax: const <data type> <variable name> = <value>;
+
+    const int constant_variable = 60; 
+
 }
