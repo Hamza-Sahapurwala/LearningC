@@ -1,5 +1,7 @@
 #include <stdio.h> // * stdio.h is a header file library which lets us use input and output functions in C
 
+#include <stdbool.h> // * stdbool.h is called for us being able to use boolean values
+
 // * This is a comment in C
 
 int main(){ // * This is a function in C (The basic building block)
@@ -119,13 +121,13 @@ int main(){ // * This is a function in C (The basic building block)
 
     printf("%c\n",aaa); // * This returns A
 
-    char hello = "Hello";
+    // char hello = "Hello";
 
-    printf("%c\n",hello); // * This doesn't work and prints some random value
+    // printf("%c\n",hello); // * This doesn't work and prints some random value
 
-    char hell = 'Hello';
+    // char hell = 'Hello';
 
-    printf("%c\n",hell); // * This prints the last letter of value hell (Look at the single quotes)
+    // printf("%c\n",hell); // * This prints the last letter of value hell (Look at the single quotes)
 
     char hel[] = "Hello"; // * This is strings in C
 
@@ -234,5 +236,21 @@ int main(){ // * This is a function in C (The basic building block)
     // * Syntax: const <data type> <variable name> = <value>;
 
     const int constant_variable = 60; 
+
+    // ! Boolean Variables
+
+    // * For boolean values in C, we need to import the stdbool.h library
+
+    // * keywords are: true and false
+
+    bool is_true_or_false = true;
+
+    printf("%d\n",is_true_or_false); // * Prints 1 (represents true)
+
+    // * if is_true_or_false = false; it will print 0 (represents false)
+
+    printf("%d\n", 10 == 5); // * Prints 0
+
+    printf("%d\n", 10 >= 5); // * Prints 1
 
 }
