@@ -799,7 +799,7 @@ void referencevariablesmemoryaddressesandpointers(){
 
     string* ptr = &food;
 
-    cout << ptr << endl; // * This will give the same  values as the above to variables
+    cout << ptr << endl; // * This will give the same values as the above two variables which is the memory address
 
     cout << *ptr << endl; // * This variable prints the value of food (Which is righ now Paneer)
 
