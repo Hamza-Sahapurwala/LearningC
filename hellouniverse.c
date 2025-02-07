@@ -253,4 +253,30 @@ int main(){ // * This is a function in C (The basic building block)
 
     printf("%d\n", 10 >= 5); // * Prints 1
 
+    // ! Conditional Statements
+
+    // * They contain:
+
+    // ! if - else - else if 
+
+    // * Syntax is a little different but does the same thing as in other programming languages 
+    
+    int for_if_statements = 10;
+
+    if (for_if_statements != 10){
+        printf("Yes\n");
+    }
+    else if (for_if_statements == 10){
+        printf("No\n");
+    }
+    else{
+        printf("Wait\n");
+    }
+
+    // ! There is also short hand conditional statements
+
+    // * Syntax: variable = (condition) ? TrueThisThingWillBeRun : FalseThisThingWillBeRun;
+
+    (10==10) ? printf("This is True\n") : printf("This is False\n") ;
+
 }
