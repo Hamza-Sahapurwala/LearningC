@@ -279,4 +279,35 @@ int main(){ // * This is a function in C (The basic building block)
 
     (10==10) ? printf("This is True\n") : printf("This is False\n") ;
 
+    // ! Switch Statements
+
+    // * Used with cases and default statements for 1 value
+
+    int for_switch = 5;
+
+    switch (for_switch){
+
+    case 1:
+
+        printf("1\n");
+
+        break;
+
+    case 2:
+        
+        printf("2\n");
+
+        break;
+
+    case 3:
+
+        printf("3\n");
+
+        break;
+
+    default:
+
+        printf("This is not 1, 2 or 3\n");
+    }
+
 }
