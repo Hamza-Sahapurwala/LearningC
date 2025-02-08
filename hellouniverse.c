@@ -264,13 +264,19 @@ int main(){ // * This is a function in C (The basic building block)
     int for_if_statements = 10;
 
     if (for_if_statements != 10){
+
         printf("Yes\n");
+
     }
     else if (for_if_statements == 10){
+
         printf("No\n");
+
     }
     else{
+
         printf("Wait\n");
+        
     }
 
     // ! There is also short hand conditional statements
