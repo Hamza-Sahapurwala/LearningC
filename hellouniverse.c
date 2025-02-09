@@ -316,4 +316,32 @@ int main(){ // * This is a function in C (The basic building block)
         printf("This is not 1, 2 or 3\n");
     }
 
+    // ! while & do-while Loops
+
+    // * Looping structures
+
+    // * Syntax: while(condition){}
+
+    int for_while_and_do_while = 0;
+
+    while (for_while_and_do_while < 10)
+    {
+        printf("%d\n", for_while_and_do_while);
+
+        for_while_and_do_while++; // * We keep this as part of the code so that the while loop doesn't slip into an infinity loop
+    }
+
+    // * Above code will not run if the condition is not met in the first place
+
+    // * So if you want the code to run at least once, use do-while loop 
+    
+    do
+    {
+
+        printf("%d\n",for_while_and_do_while);
+
+        // for_while_and_do_while++; // ! It won't go into infinite loop even without this statement
+
+    } while (for_while_and_do_while<10);
+
 }
