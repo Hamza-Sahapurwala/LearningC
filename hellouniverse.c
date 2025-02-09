@@ -297,9 +297,9 @@ int main(){ // * This is a function in C (The basic building block)
 
         printf("1\n");
 
-        break;
+        break; // * Break statements are used so that execution doesn't spill over to other cases after running this
 
-    case 2:
+    case 2: // * 1,2 & 3 represent conditions which for_switch should be equal to so that the particular case runs
         
         printf("2\n");
 
@@ -311,7 +311,7 @@ int main(){ // * This is a function in C (The basic building block)
 
         break;
 
-    default:
+    default:// * Runs if the above cases are not executed, should always be kept at the last
 
         printf("This is not 1, 2 or 3\n");
     }
