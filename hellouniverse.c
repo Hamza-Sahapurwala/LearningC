@@ -344,4 +344,33 @@ int main(){ // * This is a function in C (The basic building block)
 
     } while (for_while_and_do_while<10);
 
+    // ! For Loop
+
+    // * One of the Looping constructs in For Loop
+
+    // * Syntax: for(variable;condition;step){}
+
+    for (int for_for_loop = 10; for_for_loop > 0; for_for_loop--)
+    {
+        
+        printf("%d\n",for_for_loop);
+
+    }
+
+    // * We can use for loop also for nested loops
+
+    for (int i = 0; i < 5; i++) // * This sets the no. of rows for the pattern
+    {
+
+        for (int j = 0; j < i+1; j++) // * This sets the no. of columns for the pattern
+        {
+
+            printf("*");
+
+        }
+
+        printf("\n");
+
+    }
+
 }
