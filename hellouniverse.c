@@ -373,4 +373,36 @@ int main(){ // * This is a function in C (The basic building block)
 
     }
 
+    // ! Break and Continue
+
+    // * Break is used to break out from any looping constructors
+
+    for (int for_break = 0; for_break < 6; for_break++)
+    {
+
+        if(for_break == 3){ // * Numbers from 3 are printed
+
+            break;
+
+        }
+
+        printf("%d\n",for_break);
+
+    }
+    
+    // * Continue is used to pass all the statements after it and go to the next step of the loop variable
+
+    for (int for_continue = 0; for_continue < 6; for_continue++)
+    {
+
+        if(for_continue == 3){ // * 3 is the only no. not printed
+
+            continue;
+
+        }
+
+        printf("%d\n",for_continue);
+
+    }
+
 }
