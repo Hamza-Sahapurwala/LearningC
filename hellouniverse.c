@@ -405,4 +405,51 @@ int main(){ // * This is a function in C (The basic building block)
 
     }
 
+    // ! Arrays
+
+    // * In C, we have arrays who only accept similar data types
+
+    // * int mixed with float or decimal are not allowed as they are different data types
+
+    int arrays[] = {1,2,3,4,5}; // * Example on how arrays are made
+
+    printf("Printing of particular element: %d\n",arrays[3]); // * Prints 4
+
+    arrays[3] = 34;
+    
+    printf("Showing change of value: %d\n",arrays[3]); // * The value at index 3 is changed
+
+    for (int for_looping_through_arrays = 0; for_looping_through_arrays < 5; for_looping_through_arrays++)
+    {
+        
+        printf("%d\n",arrays[for_looping_through_arrays]);
+
+    }
+
+    // * We can set the size of the array beforehand too
+
+    // * It's useful when you already know the no. of elements to add into the array
+
+    // * You can't change the size of the array after creation
+
+    int array[5];
+
+    array[0] = 0;
+
+    array[1] = 1;
+    
+    array[2] = 2;
+    
+    array[3] = 3;
+    
+    array[4] = 4;
+
+    array[5] = 5; // * This leads to error(allegedly it doesn't)
+
+    array[6] = 7;
+
+    printf("For Specific Memory Array: %d",array[6]); // * This is supposed to throw an error but it doesn't
+
+    // TODO Why is no error being thrown even when we go above the limit of memory specified for the arrray
+
 }
