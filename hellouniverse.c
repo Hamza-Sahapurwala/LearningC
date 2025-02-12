@@ -448,8 +448,24 @@ int main(){ // * This is a function in C (The basic building block)
 
     array[6] = 7;
 
-    printf("For Specific Memory Array: %d",array[6]); // * This is supposed to throw an error but it doesn't
+    printf("For Specific Memory Array: %d\n",array[6]); // * This is supposed to throw an error but it doesn't
 
     // TODO Why is no error being thrown even when we go above the limit of memory specified for the arrray
+
+    // * Yea, the no. is not present in the array when we loop over it and the array doesn't increase in length
+
+    // * Speaking of length, Let's see how to find length of an array
+
+    // * We know, sizeof gets us how much memory something takes
+
+    // * If we do sizeof for an array, it shows us the total memory size of the array
+    
+    // * So we do sizeof an array and divide it by sizeof of any element present in the array(as array contain only same data type)
+
+    int length_of_arrays = sizeof(arrays) / sizeof(arrays[0]);
+
+    printf("The length of the array is: %d\n",length_of_arrays);
+
+    // * And it's better to find length and then loop thorugh the array
 
 }
