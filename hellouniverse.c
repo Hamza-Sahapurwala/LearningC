@@ -468,4 +468,27 @@ int main(){ // * This is a function in C (The basic building block)
 
     // * And it's better to find length and then loop thorugh the array
 
+    // ! Multi-Dimensional Arrays
+
+    // * We can make multi-dimensional arrays on C
+
+    // * data_type name[no. of rows][no. of columns] = {{}};
+
+    int multidimensional[2][2] = { {1, 2}, {3, 4}};
+
+    multidimensional[0][0] = 4;
+
+    printf("The Value has changed from %d\n", multidimensional[0][0]);
+
+    for(int for_multi = 0; for_multi < 2; for_multi++){
+
+        for (int multimulti = 0; multimulti < 2; multimulti++)
+        {
+            
+            printf("%d\n",multidimensional[for_multi][multimulti]);
+
+        }
+
+    }
+
 }
