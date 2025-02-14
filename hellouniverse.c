@@ -491,4 +491,51 @@ int main(){ // * This is a function in C (The basic building block)
 
     }
 
+    // ! Strings
+
+    // * Strings in C are just glorified characters in arrays
+
+    char first_string[] = "First One Here";
+
+    // * There is no other data type for string
+
+    // * String is just a array of characters as said before
+
+    printf("The string is: %s\n", first_string); // * %s is used to print the whole array
+
+    // * For accessing the individual characters, we use the %c
+
+    printf("The individual value is: %c\n", first_string[0]); // * %s doesn't print anything and stops everything else to print
+
+    // * Strings are mutable
+
+    first_string[0] = 'S';
+
+    printf("Changed string is: %s\n", first_string);
+
+    int length_of_first_string = sizeof(first_string) - 1; // * The terminating null character is ignored
+
+    for (int loopingthroughfirststring = 0; loopingthroughfirststring < length_of_first_string; loopingthroughfirststring++)
+    {
+
+        printf("%c\n", first_string[loopingthroughfirststring]);
+
+    }
+    
+    // * Length of string is always +1 & that is because there is \0 at the end
+
+    // * \0 is known as the null terminating character which is always included in every string and tells C that that is the end of the string
+
+    printf("%lu\n", length_of_first_string); // * \0 is included as another string character
+    
+    // * We can create strings in a other way too
+    
+    char second_string[] = {'S', 'e', 'c', 'o', 'n', 'd', '\0'};
+    
+    // * If not repeated, the printf statement in the next line will continue from same line when printing the string
+
+    printf("%s\n", second_string);
+
+    // * There is no difference in length between from the above string and normally created string
+    
 }
