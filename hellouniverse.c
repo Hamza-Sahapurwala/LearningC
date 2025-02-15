@@ -538,4 +538,13 @@ int main(){ // * This is a function in C (The basic building block)
 
     // * There is no difference in length between from the above string and normally created string
     
+    // ! Special Characters in String
+
+    // * Just like the \0 is a special character, there are other such characters in C
+
+    // * Like the \n(newline), \\(backslash), \'(singlequote), \" (To put double quotes), \t(for tab space)
+
+    char for_example_of_special_characters[] = "\"It\'s me\",\tshe said";
+
+    printf("%s\n", for_example_of_special_characters);
 }
