@@ -2,6 +2,8 @@
 
 #include <stdbool.h> // * stdbool.h is called for us being able to use boolean values
 
+#include <string.h> // * string.h is called for us to use the functions related to strings
+
 // * This is a comment in C
 
 int main(){ // * This is a function in C (The basic building block)
@@ -547,4 +549,48 @@ int main(){ // * This is a function in C (The basic building block)
     char for_example_of_special_characters[] = "\"It\'s me\",\tshe said";
 
     printf("%s\n", for_example_of_special_characters);
+
+    // ! String Functions
+
+    // * int variable = strlen(variable) This gives the length of the string
+    
+    char strlenexample[20] = "ABC";
+
+    printf("sizeof prints the memory taken like so: %lu\n", sizeof(strlenexample));
+
+    printf("strlen prints the size of the actual string without taking in account of \\0 like so: %d\n", strlen(strlenexample));
+
+    // * strcat(string where the whol thing will be stored, string whose value will be concatenated)
+
+    char string1[20] = "A"; // * If the space is not specified, it will give a bufferflow error
+
+    char string2[] = "B";
+
+    strcat(string1, string2); // * the first variable should have space which should accomodate the string of the other string too or else bufferflow error
+
+    printf("Concatenated string: %s\n", string1);
+
+    // * strcpy(string that's wants the copied content, string that has the content)
+
+    char strcop1[20] = "Hello";
+
+    char strcop2[20];
+
+    strcpy(strcop2, strcop1);
+
+    printf("The copied string is now: %s\n",strcop2);
+
+    // * int variable = strcmp(string1, string2) returns 0 if they are equal or anyother no. if not equal
+
+    char com1[] = "Hello";
+
+    char com2[] = "Hello";
+
+    char com3[] = "Hell";
+
+    printf("Comparing first and second strings: %d\n", strcmp(com1, com2));
+
+    printf("Comparing first and third strings: %d\n", strcmp(com1, com3));
+
+    printf("Comparing second and third strings: %d\n", strcmp(com2, com3));
 }
