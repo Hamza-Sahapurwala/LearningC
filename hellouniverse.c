@@ -593,4 +593,62 @@ int main(){ // * This is a function in C (The basic building block)
     printf("Comparing first and third strings: %d\n", strcmp(com1, com3));
 
     printf("Comparing second and third strings: %d\n", strcmp(com2, com3));
+
+    // ! User Input
+
+    // * Using scanf function which is inside the stdio.h library
+
+    // * It takes 2 arguments, first specifies the data type and second specifies the memory address of the idetifier
+
+    int input;
+
+    printf("Enter a no. here:\n");
+
+    scanf("%d", &input); // * It goes to the next line by itself
+
+    printf("The no. inputted is:%d\n",input);
+
+    // * We can take 2 inputs which have different data types together too
+
+    char input1;
+    
+    int input2;
+
+    printf("Input interger and character in that order: ");
+
+    scanf("%d %c", &input2, &input1); // * There should be no spaces between and the order of data type is maintained
+
+    // * It works when it takes int first
+
+    printf("The character %c and no. %d\n", input1, input2);
+
+    // * Taking string as input
+
+    char stringinput[30]; // * Size has to be specified
+
+    printf("Input a word: ");
+
+    scanf("%s", stringinput); // * No need to use & for memory address for strings
+
+    // * The only thing is that it considers space as a terminating character so only recognises first word as input
+
+    printf("The name inputted is %s\n", stringinput);
+
+    /*
+    
+    * To get around that, we can use fgets
+
+    char stringinput2[30];
+
+    printf("Input a sentence:\n");
+
+    fgets(stringinput2, sizeof(stringinput2), stdin); // * This is the syntax
+
+    // * Use fgets for multiple word input 
+
+    printf("The name is %s\n", stringinput2);
+
+    */
+
+    // * The above code doesn't work
 }
