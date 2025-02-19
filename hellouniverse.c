@@ -651,4 +651,37 @@ int main(){ // * This is a function in C (The basic building block)
     */
 
     // * The above code doesn't work
+
+    // ! Memory Addresses
+
+    // * All the values are stored in a variable, we know that
+
+    // * A variable is just a name for a memory address
+
+    // * We can access the memory address of where a value is stored
+
+    int memoryaddress;
+
+    printf("%p\n", &memoryaddress);
+
+    // * As we can see, to print memory addresses, we use %p
+
+    // * We can store some value at the variable 
+
+    memoryaddress = 5;
+
+    printf("The value is %d and memory address is %p\n", memoryaddress, &memoryaddress);
+
+    // ! Pointers
+
+    // * Pointers, as they are worded, point towards some specific memory address
+
+    int* pointerformemoryaddress = &memoryaddress;
+
+    // * Notice that the * is a must while the value to be assigned to this pointer variable
+
+    printf("The memory address held by pointer is %p\n", pointerformemoryaddress); // * %p is used
+
+    printf("The value held at the memory address is %d\n", *pointerformemoryaddress); // * This is how to 'dereference' a pointer
+
 }
