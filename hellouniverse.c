@@ -684,4 +684,53 @@ int main(){ // * This is a function in C (The basic building block)
 
     printf("The value held at the memory address is %d\n", *pointerformemoryaddress); // * This is how to 'dereference' a pointer
 
+    // ! Pointers and Arrays
+
+    // * Let's create a array
+
+    int arrayforpointers[5] = {1, 2, 3, 4, 5};
+
+    // * But let's print their memory addresses
+
+    for (int i = 0; i < 5; i++){
+        
+        printf("The value at index %d is %p\n", i, &arrayforpointers[i]);
+
+    }
+
+    // * We see that each element is given a memory address which is 4 bytes away from each other
+
+    // * Remember that each integer is 4 bytes long
+
+    // * Therefore, the total memory space taken by the array is 20 bytes here
+
+    // * And there is a catch in C
+
+    // * The name of the array is actually a pointer to the first element of the array
+
+    printf("The first element can be found like this: *nameofarray %d\n", *arrayforpointers);
+
+    // * Basically, dereference the arrayname
+
+    // * We can get the values of the next elements too
+
+    printf("The second element: %d\n", *(arrayforpointers + 1));
+
+    // * We can change the value of the element like above method too and put it in a for loop
+
+    printf("The forth element: %d\n", *(arrayforpointers + 3));
+
+    *(arrayforpointers + 3) = 7;
+
+    printf("The forth element now: %d\n", *(arrayforpointers + 3));
+
+    for (int i = 0; i < 5; i++)
+    {
+        printf("Array elements through the pointer method: %d\n", *(arrayforpointers + i));
+    }
+
+    // * This method might sound tedious but it's very fast and efficient plus this is the best method while dealing with 2-d arrays
+
+    printf("What happens when we add +1 to a pointer is that it will just go to the next memory address like so\n%p\n\tto\n%p",arrayforpointers,arrayforpointers+1);
+
 }
