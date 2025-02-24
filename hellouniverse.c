@@ -6,6 +6,18 @@
 
 // * This is a comment in C
 
+// ! Functions
+
+// * Reusable code
+
+void functions(){
+
+    // * This is how to make functions
+
+    printf("Inside a function!\n");
+
+}
+
 int main(){ // * This is a function in C (The basic building block)
 
     printf("Hello World!"); // * This prints in the terminal 
@@ -614,7 +626,7 @@ int main(){ // * This is a function in C (The basic building block)
     
     int input2;
 
-    printf("Input interger and character in that order: ");
+    printf("Input integer and character in that order: ");
 
     scanf("%d %c", &input2, &input1); // * There should be no spaces between and the order of data type is maintained
 
@@ -731,6 +743,10 @@ int main(){ // * This is a function in C (The basic building block)
 
     // * This method might sound tedious but it's very fast and efficient plus this is the best method while dealing with 2-d arrays
 
-    printf("What happens when we add +1 to a pointer is that it will just go to the next memory address like so\n%p\n\tto\n%p",arrayforpointers,arrayforpointers+1);
+    printf("What happens when we add +1 to a pointer is that it will just go to the next memory address like so\n%p\n\tto\n%p\n",arrayforpointers,arrayforpointers+1);
+
+    functions(); // * calling the function we made
+
+    functions(); // * Making a point that functions are reusable code
 
 }
