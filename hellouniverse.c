@@ -18,6 +18,20 @@ void functions(){
 
 }
 
+// ! Functions with parameters
+
+// * We are passing data into the function so we can make use of it like the example below
+
+int functionswithparameters(int a, int b, int madeforfunctions[]){ // * int tells us the data type of the returnable (it's void for functions which don't return something)
+
+    // * For arrays to be parameters, their name should be the same as that given in the argument
+
+    // * All the elements are taken regardless of the no. written b/w the square brackets written above
+
+    return a + b + madeforfunctions[4];
+
+}
+
 int main(){ // * This is a function in C (The basic building block)
 
     printf("Hello World!"); // * This prints in the terminal 
@@ -748,5 +762,11 @@ int main(){ // * This is a function in C (The basic building block)
     functions(); // * calling the function we made
 
     functions(); // * Making a point that functions are reusable code
+
+    int madeforfunctions[5] = {1,2,3,4,5} ;
+
+    printf("The ouput of the function is: %d\n",functionswithparameters(3, 6, madeforfunctions)); // * These are arguments
+
+    // * Notice that to pass arrays, we just give it's name as an argument
 
 }
